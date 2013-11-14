@@ -3,12 +3,14 @@ const KEY_TO_IF_DO_TEST = 'if_do_test';
 
 function onload() {
 	var settings = getCurrentSettings();
-	displaySettings(settings);
-	
+	//displaySettings(settings);
+
 	var bg = chrome.extension.getBackgroundPage();
 	var wordList = bg.localStorage;
 	console.log(wordList['index']);
 }
+window.onload=onload;
+
 
 function getCurrentSettings() {
 	return {
@@ -26,3 +28,4 @@ function displaySettings(settings){
 		document.getElementById('radio_do_test_no').checked = true;
 	}
 }
+

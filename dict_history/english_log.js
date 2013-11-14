@@ -1,5 +1,4 @@
 // script that logs the searched English word.
-
 const KEY_CODE_E = 69;
 const KEY_CODE_R = 82;
 const KEY_CODE_T = 84;
@@ -87,15 +86,15 @@ function showPopupItem(message, durationInMillis) {
 		popup.style.right = 0;
 		popup.style.padding = '0.8em';
 		document.body.appendChild(popup);
-		
+
 		if (popup.timer) {
 			clearTimeout(popup.timer);
 		}
-		
+
 	} else {
 		popup.style.display = 'block';
 	}
-	
+
 	if (durationInMillis > 0) {
 		popup.timer = setTimeout(dismissPopupItem, durationInMillis);
 	}

@@ -28,7 +28,7 @@
   "browser_action": {
   	"default_icon": "icon32.png",
   	"default_title": "Dict History",
-  	"popup": "popup.html"
+  	"default_popup": "popup.html"
   },
   "background": {"page": "background.html"}
 }
