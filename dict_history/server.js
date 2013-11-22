@@ -16,5 +16,5 @@ function sendToServer(url) {
   req.setRequestHeader("Content-type","application/x-www-form-urlencoded");
   var target = this;
   req.onload  = function() { target.parseJson(req, url) };
-  req.send("url=" + url);
+  req.send("url=" + encodeURIComponent(url));
 }
