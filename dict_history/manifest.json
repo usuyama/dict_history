@@ -29,5 +29,8 @@
   	"default_icon": "icon32.png",
   	"default_title": "Dict History",
   	"default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
   }
 }

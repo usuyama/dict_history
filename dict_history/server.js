@@ -2,8 +2,10 @@ function parseJson(req, url) {
   var jsonResponse = req.responseJSON;
   console.log(jsonResponse);
   if (req.status == 200) {
+    chrome.extension.sendMessage('ok');
     // registerd
   } else if (req.status == 401) {
+    chrome.extension.sendMessage('logged_out');
     // need to login
   }
 }
