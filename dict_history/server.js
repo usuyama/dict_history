@@ -12,6 +12,17 @@ function parseJson(req, url) {
 
 sendToServer(location.href);
 function sendToServer(url) {
+  if (url.indexOf("weblio") != -1) {
+    if (document.getElementById("nrCntTH") != null) {
+      console.log("word not found. we don't send it to the server");
+      return;
+    }
+  } else if (url.indexOf("eow.alc.co.jp") != -1) {
+    if (document.getElementById("unmatchMsg") != null) {
+      console.log("word not found. we don't send it to the server");
+      return;
+    }
+  }
   var req = new XMLHttpRequest();
   req.overrideMimeType("application/json");
   req.open("POST",SETTINGS['create_url'],true);

@@ -6,6 +6,7 @@
       "オンライン英和辞典で検索された英単語を記録する拡張機能です。",
     "content_scripts": [
     {
+      "run_at": "document_end",
       "matches": ["http://eow.alc.co.jp/*",
       "http://ejje.weblio.jp/content/*"],
       "js": ["settings.js", "server.js"]
