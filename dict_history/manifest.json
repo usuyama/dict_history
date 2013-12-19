@@ -1,36 +1,36 @@
 {
   "name": "Dict History Logger",
-  "manifest_version": 2,
-  "version": "1.0",
-  "description":
-  		"オンライン英和辞典で検索された英単語を記録する拡張機能です。",
-  "content_scripts": [
-	  {
-	  /*
-	  	arc, weblio, goo, Longman, excite
-	  */
-	    "matches": ["http://eow.alc.co.jp/*",
-	    			"http://ejje.weblio.jp/content/*",
-	    			"http://dictionary.goo.ne.jp/srch/ej/*",
-	    			"http://www.ldoceonline.com/search/*",
-	    			"http://www.excite.co.jp/dictionary/english_japanese/*"],
-	    "js": ["settings.js", "server.js"]
-	  }
+    "manifest_version": 2,
+    "version": "1.0",
+    "description":
+      "オンライン英和辞典で検索された英単語を記録する拡張機能です。",
+    "content_scripts": [
+    {
+      /*
+         arc, weblio, goo, Longman, excite
+       */
+      "matches": ["http://eow.alc.co.jp/*",
+      "http://ejje.weblio.jp/content/*",
+      "http://dictionary.goo.ne.jp/srch/ej/*",
+      "http://www.ldoceonline.com/search/*",
+      "http://www.excite.co.jp/dictionary/english_japanese/*"],
+      "js": ["settings.js", "server.js"]
+    }
   ],
-  "icons": {
-	  "128": "icon128.png",
-	  "16": "icon16.png",
-	  "32": "icon32.png",
+    "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "32": "icon32.png",
       "48": "icon48.png"
-  },
-  "options_page": "options.html",
-  "permissions": ["tts", "http://public.dejizo.jp/*", "http://localhost/*", "http://www.tangotyou.me/*"],
-  "browser_action": {
-  	"default_icon": "icon32.png",
-  	"default_title": "Dict History",
-  	"default_popup": "popup.html"
-  },
-  "background": {
-    "scripts": ["background.js"]
-  }
+    },
+    "options_page": "options.html",
+    "permissions": ["tts", "http://public.dejizo.jp/*", "http://localhost/*", "http://www.tangotyou.me/*"],
+    "browser_action": {
+      "default_icon": "icon32.png",
+      "default_title": "Dict History",
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "scripts": ["background.js"]
+    }
 }
