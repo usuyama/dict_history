@@ -6,14 +6,8 @@
       "オンライン英和辞典で検索された英単語を記録する拡張機能です。",
     "content_scripts": [
     {
-      /*
-         arc, weblio, goo, Longman, excite
-       */
       "matches": ["http://eow.alc.co.jp/*",
-      "http://ejje.weblio.jp/content/*",
-      "http://dictionary.goo.ne.jp/srch/ej/*",
-      "http://www.ldoceonline.com/search/*",
-      "http://www.excite.co.jp/dictionary/english_japanese/*"],
+      "http://ejje.weblio.jp/content/*"],
       "js": ["settings.js", "server.js"]
     }
   ],
